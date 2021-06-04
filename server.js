@@ -117,12 +117,12 @@ const sendCovers = (res) => {
             let hasCover = false;
             dir.forEach((file) => {
                 if (file.indexOf(".jpg") != -1 || file.indexOf(".png") != -1) {
-                    covers[albums[i]] = `http://localhost:3000/mp3/${albums[i]}/${file}`;
+                    covers[albums[i]] = `https://michalbie-music-player.herokuapp.com/mp3/${albums[i]}/${file}`;
                     hasCover = true;
                 }
             });
             if (!hasCover) {
-                covers[albums[i]] = "http://localhost:3000/defaultCover.jpg";
+                covers[albums[i]] = "https://michalbie-music-player.herokuapp.com/defaultCover.jpg";
                 console.log("No cover. Setting default.");
             }
         }
